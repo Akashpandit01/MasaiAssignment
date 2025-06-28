@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const user = {
+  id: 123,
+  profile: {
+    name: "John Doe",
+    address: {
+      city: "Los Angeles",
+      zipcode: "90001"
+    }
+  }
+};
+
+// Destructuring with optional chaining and fallback values
+const {
+  id = "Information not available",
+  profile: {
+    name = "Information not available",
+    address: {
+      city = "Information not available",
+      zipcode = "Information not available"
+    } = {}  // fallback in case address is undefined
+  } = {}    // fallback in case profile is undefined
+} = user;
+
+// Final formatted string
+const result = `User ${name} (ID: ${id}) lives in ${city} (ZIP: ${zipcode})`;
+
+console.log(result);
+
+        </script>
+
+</head>
+<body>
+    
+</body>
+</html>

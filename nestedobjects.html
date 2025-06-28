@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const profile = {
+  name: "Charlie",
+  age: 29,
+  address: {
+    city: "San Francisco",
+    zipcode: "94101"
+  }
+};
+
+const updates = {
+  age: 30,
+  address: {
+    zipcode: "94109",
+    country: "USA"
+  }
+};
+
+// Merging the objects
+const merged = {
+  ...profile,
+  ...updates,
+  address: {
+    ...profile.address,
+    ...updates.address
+  }
+};
+
+console.log(merged);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
