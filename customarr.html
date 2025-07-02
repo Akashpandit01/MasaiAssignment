@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Custom Method 1: Filter Even Numbers
+function filterEvenNumbers(arr) {
+    return arr.filter(num => num % 2 === 0);
+}
+
+// Custom Method 2: Sum of Array Elements
+function sumOfArray(arr) {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+}
+
+// Custom Method 3: Sort and Concatenate Two Arrays
+function sortAndConcat(arr1, arr2) {
+    const sorted1 = [...arr1].sort((a, b) => a - b);
+    const sorted2 = [...arr2].sort((a, b) => a - b);
+    return sorted1.concat(sorted2);
+}
+
+// Main Program
+const array1 = [5, 12, 7, 2, 9];
+const array2 = [3, 8, 1, 4, 6];
+
+console.log("Input Array 1:", array1);
+console.log("Input Array 2:", array2);
+
+// Use custom methods
+const evenArray1 = filterEvenNumbers(array1);
+const evenArray2 = filterEvenNumbers(array2);
+console.log("\nEven Numbers in Array 1:", evenArray1);
+console.log("Even Numbers in Array 2:", evenArray2);
+
+const sum1 = sumOfArray(array1);
+const sum2 = sumOfArray(array2);
+console.log("\nSum of Array 1:", sum1);
+console.log("Sum of Array 2:", sum2);
+
+const combinedSortedArray = sortAndConcat(array1, array2);
+console.log("\nSorted & Concatenated Array:", combinedSortedArray);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

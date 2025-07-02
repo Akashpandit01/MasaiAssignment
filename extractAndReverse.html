@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function extractAndReverse(arr) {
+    // Extract elements from index 2 (3rd element) to index 5 (exclusive)
+    const subArray = arr.slice(2, 5);
+
+    // Reverse the extracted subarray
+    const reversedSubArray = subArray.reverse();
+
+    // Return the reversed subarray
+    return reversedSubArray;
+}
+
+// Test the function
+const originalArray = [15, 30, 45, 60, 75, 90];
+const result = extractAndReverse(originalArray);
+
+console.log("Original Array:", originalArray);  // Should remain unchanged
+console.log("Reversed Subarray:", result);      // Should be [75, 60, 45]
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

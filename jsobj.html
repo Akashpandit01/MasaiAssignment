@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Step 1: Define the user object
+const user = {
+  name: "John Doe",
+  age: 25,
+  email: "john@example.com",
+  isAdmin: false
+};
+
+// Step 2: Convert the object to a JSON string
+const jsonString = JSON.stringify(user);
+
+// Step 3: Parse the JSON string back to a JavaScript object
+const parsedUser = JSON.parse(jsonString);
+
+// Step 4: Access and print each key's value
+console.log("Name:", parsedUser.name);
+console.log("Age:", parsedUser.age);
+console.log("Email:", parsedUser.email);
+console.log("Admin:", parsedUser.isAdmin);
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

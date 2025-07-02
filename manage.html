@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+function manageStudents() {
+    let students = ["Alice", "Bob", "Charlie"];
+
+    // Add "David" at index 1
+    students.splice(1, 0, "David");  // ["Alice", "David", "Bob", "Charlie"]
+
+    // Check if "Eve" is in the list
+    let hasEve = students.includes("Eve");
+    console.log("Is 'Eve' in the list?", hasEve);  // Should print: false
+
+    // Convert the array to a comma-separated string
+    let studentString = students.join(",");
+    console.log("Student list:", studentString);  // Expected: "Alice,David,Bob,Charlie"
+
+    return students;  // Return for testing purposes
+}
+
+// Call main function
+let finalStudents = manageStudents();
+
+
+// ✅ Additional Test Cases
+console.log("\n--- Test Cases ---");
+
+// Test 1: Adding at index 0
+let test1 = ["John", "Jane"];
+test1.splice(0, 0, "Mike");
+console.log("Test 1 (Add at start):", test1.join(","));
+// Expected: Mike,John,Jane
+
+// Test 2: Checking existence (positive case)
+let test2 = ["Tom", "Jerry"];
+console.log("Test 2 (Includes 'Tom'):", test2.includes("Tom"));  // Expected: true
+
+// Test 3: Checking existence (negative case)
+console.log("Test 3 (Includes 'Spike'):", test2.includes("Spike"));  // Expected: false
+
+// Test 4: Join on empty array
+let test4 = [];
+console.log("Test 4 (Join empty):", test4.join(","));  // Expected: ""
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

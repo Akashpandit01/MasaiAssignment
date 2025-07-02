@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function manageStudents() {
+    let students = ["Alice", "Bob", "Charlie"];
+
+    // ✅ Add "David" at index 1
+    students.splice(1, 0, "David");  // ["Alice", "David", "Bob", "Charlie"]
+
+    // ✅ Check if "Eve" is in the list
+    console.log("Includes 'Eve'? →", students.includes("Eve"));  // false
+
+    // ✅ Convert to a comma-separated string
+    console.log("Final Student List →", students.join(","));  // "Alice,David,Bob,Charlie"
+
+    return students; // return for test cases
+}
+
+// Run the main function
+const finalList = manageStudents();
+
+
+// -------------------
+// ✅ Additional Test Cases
+// -------------------
+
+console.log("\n--- Test Cases ---");
+
+// Test 1: Add at beginning
+let test1 = ["Tom", "Jerry"];
+test1.splice(0, 0, "Spike");
+console.log("Test 1 (Add at start):", test1.join(","));
+// Expected: Spike,Tom,Jerry
+
+// Test 2: Add at end
+let test2 = ["Anna", "Elsa"];
+test2.splice(test2.length, 0, "Olaf");
+console.log("Test 2 (Add at end):", test2.join(","));
+// Expected: Anna,Elsa,Olaf
+
+// Test 3: Check includes - positive
+console.log("Test 3 (Includes 'Elsa'):", test2.includes("Elsa")); // true
+
+// Test 4: Check includes - negative
+console.log("Test 4 (Includes 'Kristoff'):", test2.includes("Kristoff")); // false
+
+// Test 5: Join empty array
+let test5 = [];
+console.log("Test 5 (Join empty):", test5.join(",")); // ""
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
