@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let user = {
+  username: "john_doe",
+  showUsername: function() {
+    console.log("Method:", this.username);
+  }
+};
+
+function displayUsername() {
+  console.log("Function:", this.username);
+}
+
+// Call as a method — 'this' refers to the user object
+user.showUsername();      // Output: Method: john_doe
+
+// Call as a regular function — 'this' refers to the global object (undefined in strict mode)
+displayUsername();        // Output: Function: undefined (in strict mode)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

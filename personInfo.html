@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function personInfo() {
+  console.log("Name: " + this.name + ", Age: " + this.age);
+}
+
+// Object with name and age
+let person = {
+  name: "Akash",
+  age: 24
+};
+
+// Call the function with `person` as `this` context
+personInfo.call(person);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

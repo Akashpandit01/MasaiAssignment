@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let car = {
+  brand: "Tesla",
+  getBrand: function() {
+    return this.brand;
+  }
+};
+
+// Use bind() to permanently bind the context to the car object
+let boundGetBrand = car.getBrand.bind(car);
+
+// Call the bound function
+console.log(boundGetBrand());  // Output: "Tesla"
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
