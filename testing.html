@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+doTask1(function(result1) {
+  doTask2(result1, function(result2) {
+    doTask3(result2, function(result3) {
+      console.log(result3);
+    });
+  });
+});
+
+doTask1()
+  .then(result1 => doTask2(result1))
+  .then(result2 => doTask3(result2))
+  .then(result3 => console.log(result3))
+  .catch(err => console.error(err));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
