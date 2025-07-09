@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+function createEmployee(name, role, salary) {
+  return {
+    name,
+    role,
+    salary,
+    introduce() {
+      console.log(`Hello, I am ${this.name}, working as a ${this.role}.`);
+    }
+  };
+}
+
+const employee1 = createEmployee("Alice", "Developer", 60000);
+employee1.introduce(); 
+
+const employee2 = createEmployee("Bob", "Designer", 50000);
+employee2.introduce(); 
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
